@@ -20,5 +20,5 @@ if (userNumberTwo == userNumberOne * userNumberOne)
     Console.WriteLine("да");
 }
 else{
-    Console.WriteLine("нт");
+    Console.WriteLine("нет");
 }
