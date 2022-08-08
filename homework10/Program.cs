@@ -13,7 +13,7 @@ int addNumberLength = addNumber.ToString().Length;
 if (addNumberLength != 3 )
 {
     Console.WriteLine("Вы ввели не трехзначное число.");
-    Console.WriteLine("Введите трехзначное число: ");
+    //Console.WriteLine("Введите трехзначное число. ");
 }
 else
 {
