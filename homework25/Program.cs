@@ -9,6 +9,7 @@ Console.WriteLine("Введите число \"A\"");
 int numA = Int32.Parse(Console.ReadLine());
 Console.WriteLine("Введите число \"B\"");
 int numB = Int32.Parse(Console.ReadLine());
+//Инициализируем метод с циклом
 int AriseToThePowerB (int numberA, int numberB)
 {
     int i = 1;
