@@ -20,7 +20,7 @@ Console.Write($"{arr[i]} ");
 RandomArray(arr); 
 */
 
-/*Console.Clear();
+Console.Clear();
 Console.WriteLine("Введите число:");
 int num = int.Parse(Console.ReadLine());
 
@@ -33,12 +33,12 @@ int ProdNum(int number)
     }
     return prodNumber;
 }
-Console.WriteLine($"Произведение чисел от 1 до {num} = {ProdNum(num)}");*/
+Console.WriteLine($"Произведение чисел от 1 до {num} = {ProdNum(num)}");
 
-
+/*
 Console.Clear();
 Console.WriteLine("Введите число: ");
-int num = int.Parse(Console.ReadLine());
+int num = Int32.Parse(Console.ReadLine());
 
 int factorial(int number)
 {
@@ -51,3 +51,4 @@ return fact;
 }
 
 Console.WriteLine($"Факториал {factorial(num)}"); 
+*/
