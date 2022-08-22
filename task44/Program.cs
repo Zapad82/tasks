@@ -27,4 +27,5 @@ void PrintArray(int[] arr)
         else Console.Write(arr[i] + "]"); 
     } 
 } 
-int[] Array = Fib(num); PrintArray(Array); 
+int[] Array = Fib(num); 
+PrintArray(Array); 
