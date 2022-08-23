@@ -24,8 +24,8 @@ int[] BuildArray(int m)
 
 void PrintArray(int[] arr) 
 {
-    Console.WriteLine($"Вы ввели {m} положительных или отрицательных чисел.");
-    Console.WriteLine("В результате, получился массив"); 
+    Console.Write($"Вы ввели {m} чисел. ");
+    Console.Write("В результате, получился массив: "); 
     for (int i = 0; i < arr.Length; i++) 
     {
         if (i == 0) Console.Write("["); 
@@ -48,4 +48,4 @@ for (int j=0; j < Array.Length; j++)
     sumPositive = sumPositive + 1;
 }
 
-Console.WriteLine($"Вы ввели {sumNegative} раз отрицательные числа и {sumPositive} раз положительные.");
+Console.WriteLine($"Вы ввели {sumNegative} раз(-а) отрицательные числа и {sumPositive} раз(-а) положительные.");
