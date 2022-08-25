@@ -19,7 +19,7 @@ Console.Write("Введите количество строк в массиве:
 int rows = Convert.ToInt32(Console.ReadLine());
 int columns = Convert.ToInt32(Console.ReadLine());
 
-int[,] array = GetArray(rows, columns, 0,20);
+int[,] array = GetArray(rows, columns, 0, 20);
 Console.WriteLine("С помощью генератора случайных чисел, мы получили массив: ");
 PrintArray(array);
 Console.WriteLine();
@@ -27,11 +27,11 @@ Console.WriteLine();
 int[,] GetArray(int rows, int columns, int min, int max)
 {
     int[,] result = new int[rows, columns];
-    for(int i=0; i<rows; i++)
+    for (int i = 0; i < rows; i++)
     {
-        for(int j=0; j<columns; j++)
+        for (int j = 0; j < columns; j++)
         {
-            result[i,j] = new Random().Next(min, max);
+            result[i, j] = new Random().Next(min, max);
         }
     }
     return result;
@@ -39,11 +39,11 @@ int[,] GetArray(int rows, int columns, int min, int max)
 
 void PrintArray(int[,] array)
 {
-    for(int i=0;i<array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j=0; j<array.GetLength(1);j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write($"{array[i,j]} ");
+            Console.Write($"{array[i, j]} ");
         }
         Console.WriteLine();
     }
@@ -55,5 +55,5 @@ if (positionRow > array.GetLength(0) || positionColumn > array.GetLength(1))
 }
 else
 {
-    Console.WriteLine($"значение элемента {positionRow} строки и {positionColumn} столбца равно {array[positionRow-1,positionColumn-1]}");
+    Console.WriteLine($"значение элемента {positionRow} строки и {positionColumn} столбца равно {array[positionRow - 1, positionColumn - 1]}");
 }
