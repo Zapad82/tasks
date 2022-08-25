@@ -44,3 +44,8 @@ void PrintArray(int[,] array)
         Console.WriteLine();
     }
 }
+
+int SumNumberIndex(int [,] array)
+{
+    
+}
