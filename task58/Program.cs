@@ -53,22 +53,22 @@ void PrintArray(int[,] array)
 
 
 int[,] resultArray1Array2 = new int[rows, columns2];
-void CompositionArray1Array2(int[,] array1,int[,] array2, int[,] resultArray1Array2)
+void CompositionArray1Array2(int[,] array1, int[,] array2, int[,] resultArray1Array2)
 {
-    for(int i=0;i<resultArray1Array2.GetLength(0); i++)
+    for (int i = 0; i < resultArray1Array2.GetLength(0); i++)
     {
-        for(int j=0; j<resultArray1Array2.GetLength(1); j++)
+        for (int j = 0; j < resultArray1Array2.GetLength(1); j++)
         {
-            int sum=0;
-            for(int k=0; k<array1.GetLength(1); k++)
+            int sum = 0;
+            for (int k = 0; k < array1.GetLength(1); k++)
             {
-                sum += array1[i,k] * array2[k,j];
+                sum += array1[i, k] * array2[k, j];
             }
-            resultArray1Array2[i,j]=sum;
+            resultArray1Array2[i, j] = sum;
         }
     }
 }
 
-CompositionArray1Array2(array1,array2, resultArray1Array2);
+CompositionArray1Array2(array1, array2, resultArray1Array2);
 Console.WriteLine($"Произведение первой и второй матриц:");
 PrintArray(resultArray1Array2);

@@ -19,57 +19,57 @@ PrintArray(arrayXYZ);
 
 void FillArray(int[,,] arrayXYZ)
 {
-  int[] temp = new int[arrayXYZ.GetLength(0) * arrayXYZ.GetLength(1) * arrayXYZ.GetLength(2)];
-  int  num;
-  for (int i = 0; i < temp.GetLength(0); i++)
-  {
-    temp[i] = new Random().Next(10, 100);
-    num = temp[i];
-    if (i >= 1)
+    int[] temp = new int[arrayXYZ.GetLength(0) * arrayXYZ.GetLength(1) * arrayXYZ.GetLength(2)];
+    int num;
+    for (int i = 0; i < temp.GetLength(0); i++)
     {
-      for (int j = 0; j < i; j++)
-      {
-        while (temp[i] == temp[j])
+        temp[i] = new Random().Next(10, 100);
+        num = temp[i];
+        if (i >= 1)
         {
-          temp[i] = new Random().Next(10, 100);
-          j = 0;
-          num = temp[i];
+            for (int j = 0; j < i; j++)
+            {
+                while (temp[i] == temp[j])
+                {
+                    temp[i] = new Random().Next(10, 100);
+                    j = 0;
+                    num = temp[i];
+                }
+                num = temp[i];
+            }
         }
-          num = temp[i];
-      }
     }
-  }
 
-  int count = 0; 
-  for (int x = 0; x < arrayXYZ.GetLength(0); x++)
-  {
-    for (int y = 0; y < arrayXYZ.GetLength(1); y++)
+    int count = 0;
+    for (int x = 0; x < arrayXYZ.GetLength(0); x++)
     {
-      for (int z = 0; z < arrayXYZ.GetLength(2); z++)
-      {
-        arrayXYZ[x, y, z] = temp[count];
-        count++;
-      }
+        for (int y = 0; y < arrayXYZ.GetLength(1); y++)
+        {
+            for (int z = 0; z < arrayXYZ.GetLength(2); z++)
+            {
+                arrayXYZ[x, y, z] = temp[count];
+                count++;
+            }
+        }
     }
-  }
 }
 
 
 void PrintArray(int[,,] arrayXYZ)
 {
-  for (int i = 0; i < arrayXYZ.GetLength(0); i++)
-  {
-    for (int j = 0; j < arrayXYZ.GetLength(1); j++)
+    for (int i = 0; i < arrayXYZ.GetLength(0); i++)
     {
-      Console.Write($"X{i} Y{j} ");
-      for (int k = 0; k < arrayXYZ.GetLength(2); k++)
-      {
-        Console.Write( $"Z{k}={arrayXYZ[i,j,k]}; ");
-      }
-      Console.WriteLine();
+        for (int j = 0; j < arrayXYZ.GetLength(1); j++)
+        {
+            Console.Write($"X{i} Y{j} ");
+            for (int k = 0; k < arrayXYZ.GetLength(2); k++)
+            {
+                Console.Write($"Z{k}={arrayXYZ[i, j, k]}; ");
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine();
     }
-    Console.WriteLine();
-  }
 }
 
 Console.WriteLine();
