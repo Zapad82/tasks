@@ -9,20 +9,25 @@ M = 4; N = 8. -> 18
 Console.Clear();
 
 Console.WriteLine("Введите начальное число M:");
-int numberM = int.Parse(Console.ReadLine());
+int numberM = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Введите начальное число N:");
-int numberN = int.Parse(Console.ReadLine());
+int numberN = Convert.ToInt32(Console.ReadLine());
 
-void EvenNumberSum (int numberM, int numberN, int sum)
-{
-        if (numberM > numberN) 
+if (numberM % 2 != 0)
     {
-        Console.WriteLine($"Сумма натуральных элементов в промежутке от M до N: {sum}"); 
-        return;
+        numberM++;
     }
-    sum = sum + (numberM+2);
-    EvenNumberSum(numberM, numberN, sum);
-}
 
-EvenNumberSum(numberM, numberN, 0);
+int EvenNumberSum(int numberM, int numberN)
+{
+    if (numberM <= numberN)
+        {
+            return numberM + EvenNumberSum(numberM + 2, numberN);
+        }
+    else
+    {
+        return 0;
+    }
+}
+Console.WriteLine(EvenNumberSum(numberM, numberN));
