@@ -7,13 +7,13 @@ A = 2; B = 3 -> 8
 
 Console.Clear();
 Console.WriteLine("Введите число A:");
-int number=Convert.ToInt32(Console.ReadLine());
+int number = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Введите число B:");
-int degree=Convert.ToInt32(Console.ReadLine());
+int degree = Convert.ToInt32(Console.ReadLine());
 
 int Pow(int number, int degree)
 {
-    return degree == 0 ? 1 : Pow(number, degree-1)*number;
+    return degree == 0 ? 1 : Pow(number, degree - 1) * number;
 }
 Console.WriteLine(Pow(number, degree));

@@ -15,16 +15,16 @@ Console.WriteLine("Введите начальное число N:");
 int numberN = Convert.ToInt32(Console.ReadLine());
 
 if (numberM % 2 != 0)
-    {
-        numberM++;
-    }
+{
+    numberM++;
+}
 
 int EvenNumberSum(int numberM, int numberN)
 {
     if (numberM <= numberN)
-        {
-            return numberM + EvenNumberSum(numberM + 2, numberN);
-        }
+    {
+        return numberM + EvenNumberSum(numberM + 2, numberN);
+    }
     else
     {
         return 0;
